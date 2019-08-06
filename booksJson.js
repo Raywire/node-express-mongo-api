@@ -1,3 +1,4 @@
+/* eslint-disable-next-line */
 db.books.insert([
   {
     title: 'War and Peace',
