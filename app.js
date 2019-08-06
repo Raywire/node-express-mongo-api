@@ -7,7 +7,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/bookAPI', { useNewUrlParser: true })
 
 const port = process.env.PORT || 3000;
 const Book = require('./models/bookModel');
-const bookRouter = require('./routes/bookRouter')();
+const bookRouter = require('./routes/bookRouter')(Book);
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
