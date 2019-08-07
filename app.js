@@ -3,7 +3,11 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
 const app = express();
-mongoose.connect('mongodb://127.0.0.1:27017/bookAPI', { useNewUrlParser: true });
+if (process.env.ENV === 'Test') {
+  mongoose.connect('mongodb://127.0.0.1:27017/bookAPI_Test', { useNewUrlParser: true });
+} else {
+  mongoose.connect('mongodb://127.0.0.1:27017/bookAPI', { useNewUrlParser: true });
+}
 
 const port = process.env.PORT || 3000;
 const Book = require('./models/bookModel');
@@ -19,6 +23,8 @@ app.get('/', (req, res) => {
   res.send('Welcome to my API');
 });
 
-app.listen(port, () => {
+app.server = app.listen(port, () => {
   console.log(`Running on port ${port}`); // eslint-disable-line no-console
 });
+
+module.exports = app;
