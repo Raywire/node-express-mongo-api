@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/Raywire/node-express-mongo-api.svg?branch=develop)](https://travis-ci.org/Raywire/node-express-mongo-api)
 ## Title
 BooksAPI
 
