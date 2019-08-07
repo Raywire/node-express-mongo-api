@@ -5,9 +5,9 @@ require('dotenv').config();
 
 const app = express();
 if (process.env.ENV === 'Test') {
-  mongoose.connect(process.env.DATABASE_URL_TEST, { useNewUrlParser: true });
+  mongoose.connect(process.env.MONGODB_URI_TEST, { useNewUrlParser: true });
 } else {
-  mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true });
+  mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true });
 }
 
 const port = process.env.PORT || 3000;
