@@ -27,7 +27,9 @@ npm run start
 ```
 
 ## Running the tests
-
+```node
+npm test
+```
 
 ## Deployment on Heroku
 
@@ -46,6 +48,7 @@ versioning for the endpoints
 
 ## API Documentation
 
+[Postman Documentation](https://documenter.getpostman.com/view/6831940/SVYrtz6f)
 
 ## Author
 
