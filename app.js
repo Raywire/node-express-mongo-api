@@ -1,12 +1,13 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+require('dotenv').config();
 
 const app = express();
 if (process.env.ENV === 'Test') {
-  mongoose.connect('mongodb://127.0.0.1:27017/bookAPI_Test', { useNewUrlParser: true });
+  mongoose.connect(process.env.DATABASE_URL_TEST, { useNewUrlParser: true });
 } else {
-  mongoose.connect('mongodb://127.0.0.1:27017/bookAPI', { useNewUrlParser: true });
+  mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true });
 }
 
 const port = process.env.PORT || 3000;
