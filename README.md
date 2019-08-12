@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/Raywire/node-express-mongo-api.svg?branch=develop)](https://travis-ci.org/Raywire/node-express-mongo-api)
+[![Maintainability](https://api.codeclimate.com/v1/badges/99061152f7a952369204/maintainability)](https://codeclimate.com/github/Raywire/node-express-mongo-api/maintainability)
 ## Title
 BooksAPI
 
